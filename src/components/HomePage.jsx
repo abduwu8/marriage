@@ -54,7 +54,7 @@ const HomePage = () => {
       transition={{ duration: 0.5 }}
       className="h-screen overflow-hidden"
     >
-      <div className='bg-gradient-to-br from-[#1A1E2A] via-[#2D3142] to-[#1A1E2A] w-full h-full flex flex-col items-center justify-between relative p-4'>
+      <div className='bg-gradient-to-br from-[#1A1E2A] via-[#2D3142] to-[#1A1E2A] w-full h-full flex flex-col items-center justify-between relative p-2 sm:p-4'>
         <div className="bokeh-background"></div>
         {showConfetti && (
           <ReactConfetti
@@ -69,14 +69,14 @@ const HomePage = () => {
           />
         )}
         <div className='flex flex-col items-center justify-center w-full z-10 flex-grow'>
-          <div className='bg-black bg-opacity-70 p-4 sm:p-6 rounded-lg shadow-lg w-full max-w-3xl backdrop-blur-sm'>
-            <div className='text-[#BFC0C0] text-center text-base sm:text-xl mb-2 sm:mb-4 font-semibold'>
+          <div className='bg-black bg-opacity-70 p-3 sm:p-6 rounded-lg shadow-lg w-full max-w-xs sm:max-w-3xl backdrop-blur-sm'>
+            <div className='text-[#BFC0C0] text-center text-sm sm:text-xl mb-2 sm:mb-4 font-semibold'>
               Countdown To Aamir Hussain WEDS Raffat Jahan
             </div>
             <div className='flex justify-between'>
               {Object.keys(timeLeft).map((interval) => (
                 <div key={interval} className='flex flex-col items-center'>
-                  <div className='text-[#EF8354] text-2xl sm:text-4xl font-bold mb-1'>
+                  <div className='text-[#EF8354] text-lg sm:text-4xl font-bold mb-1'>
                     {timeLeft[interval]}
                   </div>
                   <div className='text-[#BFC0C0] text-xs sm:text-sm capitalize'>
@@ -89,18 +89,18 @@ const HomePage = () => {
           <img
             src={confettiIcon}
             alt="Confetti"
-            className="w-8 h-8 sm:w-10 sm:h-10 cursor-pointer hover:scale-110 transition-transform duration-300 mt-4"
+            className="w-6 h-6 sm:w-10 sm:h-10 cursor-pointer hover:scale-110 transition-transform duration-300 mt-4"
             onClick={handleConfettiClick}
           />
         </div>
         <div className='w-full mt-2 z-10 flex justify-between items-end'>
           <button
             onClick={handleHaldiReveal}
-            className="bg-[#EF8354] text-white px-3 py-1 sm:px-4 sm:py-2 rounded-lg hover:bg-[#D76C3B] transition-colors duration-300 text-sm sm:text-base"
+            className="bg-[#EF8354] text-white px-2 py-1 sm:px-4 sm:py-2 rounded-lg hover:bg-[#D76C3B] transition-colors duration-300 text-xs sm:text-base"
           >
             More Information
           </button>
-          <span className='text-[#EF8354] animate-gradient-x text-base sm:text-xl'>
+          <span className='text-[#EF8354] animate-gradient-x text-sm sm:text-xl'>
             10th January 2025
           </span>
         </div>

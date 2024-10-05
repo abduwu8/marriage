@@ -26,7 +26,7 @@ const PreLoadPage = () => {
             transition={{ duration: 0.5 }}
             className="preloader flex items-center justify-center h-screen bg-black"
           >
-            <p className="text-white text-centertext-2xl font-light">Redirecting To Your Destination...</p>
+            <p className="text-white text-center text-lg sm:text-2xl font-light">Redirecting To Your Destination...</p>
           </motion.div>
         ) : (
           <motion.div

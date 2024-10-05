@@ -46,11 +46,11 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="chatbot bg-white rounded-lg shadow-md p-4 max-w-md w-full">
-      <div className="messages-container h-64 overflow-y-auto mb-4">
+    <div className="chatbot bg-white rounded-lg shadow-md p-2 sm:p-4 w-full max-w-sm sm:max-w-md mx-auto">
+      <div className="messages-container h-48 sm:h-64 overflow-y-auto mb-2 sm:mb-4">
         {messages.map((message, index) => (
           <div key={index} className={`message ${message.user ? 'text-right' : 'text-left'} mb-2`}>
-            <span className={`inline-block p-2 rounded-lg ${message.user ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-gray-800'}`}>
+            <span className={`inline-block p-2 rounded-lg text-sm sm:text-base ${message.user ? 'bg-yellow-500 text-white' : 'bg-gray-200 text-gray-800'}`}>
               {message.text}
             </span>
           </div>
@@ -62,13 +62,13 @@ const Chatbot = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Ask about the Nikkah..."
-          className="flex-grow border rounded-l-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          className="flex-grow border rounded-l-lg px-2 sm:px-4 py-1 sm:py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-yellow-500"
         />
         <button
           type="submit"
-          className="bg-yellow-500 text-white px-4 py-2 rounded-r-lg hover:bg-yellow-600 transition-colors duration-300 flex items-center justify-center"
+          className="bg-yellow-500 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-r-lg hover:bg-yellow-600 transition-colors duration-300 flex items-center justify-center"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-5 sm:w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clipRule="evenodd" />
           </svg>
         </button>
