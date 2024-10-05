@@ -101,7 +101,7 @@ const HomePage = () => {
             More Information
           </button>
           <span className='text-[#EF8354] animate-gradient-x text-sm sm:text-xl'>
-            10th January 2025
+            Curved By Abdullah
           </span>
         </div>
       </div>
